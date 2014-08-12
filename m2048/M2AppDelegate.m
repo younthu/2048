@@ -8,6 +8,8 @@
 
 #import "M2AppDelegate.h"
 #import "Flurry.h"
+#import <ShareSDK/ShareSDK.h>
+#import "ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.h"
 
 
 @implementation M2AppDelegate
@@ -16,6 +18,13 @@
 {
     [Flurry startSession:@"QDFCBY2QQGXTYTWG7WD6"];
     [Flurry setCrashReportingEnabled:YES];
+    
+    // Share SDK setup
+    [ShareSDK registerApp:@"2ada5371018c"];
+    [ShareSDK  connectSinaWeiboWithAppKey:@"568898243"
+                                appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                              redirectUri:@"http://www.sharesdk.cn"
+                              weiboSDKCls:[WeiboSDK class]];
   return YES;
 }
 
