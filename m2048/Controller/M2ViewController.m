@@ -67,6 +67,8 @@
 - (IBAction)undoIt:(id)sender {
     [_scene undo];
 }
+- (IBAction)shareIt:(id)sender {
+}
 
 - (void)updateState
 {

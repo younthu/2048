@@ -146,13 +146,23 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-xz-Yuw">
-                                <rect key="frame" x="20" y="538" width="38" height="30"/>
+                                <rect key="frame" x="20" y="548" width="38" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Undo"/>
                                 <connections>
                                     <action selector="undoIt:" destination="LVB-YS-i5n" eventType="touchUpInside" id="VIN-HZ-Xdz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40b-zk-EX9">
+                                <rect key="frame" x="260" y="548" width="48" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Jau-Qs-0q6"/>
+                                    <constraint firstAttribute="height" constant="20" id="a9m-W7-9xH"/>
+                                </constraints>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareIt:" destination="LVB-YS-i5n" eventType="touchUpInside" id="39z-Ac-Rtj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -164,6 +174,9 @@
                             <constraint firstItem="7bR-CK-ht0" firstAttribute="top" secondItem="bdc-N1-crn" secondAttribute="top" id="Yjw-hH-Qj2"/>
                             <constraint firstAttribute="bottom" secondItem="7bR-CK-ht0" secondAttribute="bottom" id="Ysg-Ye-xrC"/>
                             <constraint firstItem="7bR-CK-ht0" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="dkE-7i-2C5"/>
+                            <constraint firstItem="40b-zk-EX9" firstAttribute="top" secondItem="Kbg-xz-Yuw" secondAttribute="top" id="fhp-jp-vV1"/>
+                            <constraint firstAttribute="trailing" secondItem="40b-zk-EX9" secondAttribute="trailing" constant="12" id="lLa-Bg-jec"/>
+                            <constraint firstAttribute="bottom" secondItem="40b-zk-EX9" secondAttribute="bottom" id="zx2-f2-8PX"/>
                         </constraints>
                     </view>
                     <connections>
