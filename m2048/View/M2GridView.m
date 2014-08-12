@@ -53,19 +53,6 @@
     [backgroundView.layer addSublayer:layer];
   } reverseOrder:NO];
   
-    // special cell
-    CALayer *layer = [CALayer layer];
-    CGPoint point = [GSTATE locationOfPosition:M2PositionMake(-1, 0)];
-    
-    CGRect frame = layer.frame;
-    frame.size = CGSizeMake(GSTATE.tileSize, GSTATE.tileSize);
-    frame.origin = CGPointMake(point.x, [[UIScreen mainScreen] bounds].size.height - point.y - GSTATE.tileSize + 10);
-    layer.frame = frame;
-    
-    layer.backgroundColor = [GSTATE boardColor].CGColor;
-    layer.cornerRadius = GSTATE.cornerRadius;
-    layer.masksToBounds = YES;
-    [backgroundView.layer addSublayer:layer];
   return [M2GridView snapshotWithView:backgroundView];
 }
 
