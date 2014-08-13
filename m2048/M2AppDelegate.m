@@ -10,6 +10,8 @@
 #import "Flurry.h"
 #import <ShareSDK/ShareSDK.h>
 #import "ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.h"
+#import "ShareSDK/Extend/QQConnectSDK/TencentOpenAPI.framework/Headers/TencentOAuth.h"
+#import "ShareSDK/Extend/QQConnectSDK/TencentOpenAPI.framework/Headers/QQApiInterface.h"
 
 
 @implementation M2AppDelegate
@@ -25,6 +27,10 @@
                                 appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
                               redirectUri:@"http://www.sharesdk.cn"
                               weiboSDKCls:[WeiboSDK class]];
+    [ShareSDK connectQZoneWithAppKey:@"WeuLtwpFlRPuGZ3t"
+                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
   return YES;
 }
 
