@@ -9,9 +9,13 @@
 #import "M2AppDelegate.h"
 #import "Flurry.h"
 #import <ShareSDK/ShareSDK.h>
-#import "ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.h"
-#import "ShareSDK/Extend/QQConnectSDK/TencentOpenAPI.framework/Headers/TencentOAuth.h"
-#import "ShareSDK/Extend/QQConnectSDK/TencentOpenAPI.framework/Headers/QQApiInterface.h"
+#import <SinaWeiboConnection/SinaWeiboConnection.h>
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import "WeiboSDK.h"
+#import <QZoneConnection/QZoneConnection.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentWeiboConnection/TencentWeiboConnection.h>
 
 
 @implementation M2AppDelegate
@@ -27,10 +31,14 @@
                                 appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
                               redirectUri:@"http://www.sharesdk.cn"
                               weiboSDKCls:[WeiboSDK class]];
-    [ShareSDK connectQZoneWithAppKey:@"WeuLtwpFlRPuGZ3t"
-                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"
+    [ShareSDK connectQZoneWithAppKey:@"1102005755"
+                           appSecret:@"WeuLtwpFlRPuGZ3t"
                    qqApiInterfaceCls:[QQApiInterface class]
                      tencentOAuthCls:[TencentOAuth class]];
+    
+    [ShareSDK connectQQWithQZoneAppKey:@"1102005755"                 //该参数填入申请的QQ AppId
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
   return YES;
 }
 
@@ -61,4 +69,20 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
 @end
