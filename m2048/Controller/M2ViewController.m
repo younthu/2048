@@ -72,13 +72,13 @@
     NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
     
     //构造分享内容
-    id<ISSContent> publishContent = [ShareSDK content:@"2048爆炸版"
-                                       defaultContent:@"我在玩2048爆炸版，可以回退，支持1024，支持8196，各种好玩的模式免费玩哦！"
+    id<ISSContent> publishContent = [ShareSDK content:@""
+                                       defaultContent:@""
                                                 image:[ShareSDK imageWithPath:imagePath]
-                                                title:@"2048Delux"
-//                                                  url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
-                                                  url:@"d2048delux://"
-                                          description:@"2048爆炸版"
+                                                title:@"2048爆炸版"
+                                                  url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
+//                                                  url:@"d2048delux://ddd"
+                                          description:@"我在玩2048爆炸版，可以回退，支持1024，支持8196，各种好玩的模式免费玩哦!"
                                             mediaType:SSPublishContentMediaTypeNews];
     
     [ShareSDK showShareActionSheet:nil
@@ -91,6 +91,7 @@
                                 if (state == SSResponseStateSuccess)
                                 {
                                     NSLog(@"分享成功");
+                                    
                                 }
                                 else if (state == SSResponseStateFail)
                                 {

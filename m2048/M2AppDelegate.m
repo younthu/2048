@@ -27,18 +27,18 @@
     
     // Share SDK setup
     [ShareSDK registerApp:@"2ada5371018c"];
-    [ShareSDK  connectSinaWeiboWithAppKey:@"568898243"
-                                appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
-                              redirectUri:@"http://www.sharesdk.cn"
+    [ShareSDK  connectSinaWeiboWithAppKey:@"1079976897"
+                                appSecret:@"629eadfdc738ab1c4345a2a9eec909f2"
+                              redirectUri:@"https://api.weibo.com/oauth2/default.html"
                               weiboSDKCls:[WeiboSDK class]];
     [ShareSDK connectQZoneWithAppKey:@"1102005755"
                            appSecret:@"WeuLtwpFlRPuGZ3t"
                    qqApiInterfaceCls:[QQApiInterface class]
                      tencentOAuthCls:[TencentOAuth class]];
     
-    [ShareSDK connectQQWithQZoneAppKey:@"1102005755"                 //该参数填入申请的QQ AppId
-                     qqApiInterfaceCls:[QQApiInterface class]
-                       tencentOAuthCls:[TencentOAuth class]];
+//    [ShareSDK connectQQWithQZoneAppKey:@"1102005755"                 //该参数填入申请的QQ AppId
+//                     qqApiInterfaceCls:[QQApiInterface class]
+//                       tencentOAuthCls:[TencentOAuth class]];
   return YES;
 }
 
