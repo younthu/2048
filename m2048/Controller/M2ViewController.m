@@ -77,7 +77,7 @@
                                                 image:[ShareSDK imageWithPath:imagePath]
                                                 title:@"2048Delux"
 //                                                  url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
-                                                  url:@"2048delux://ddd"
+                                                  url:@"d2048delux://"
                                           description:@"2048爆炸版"
                                             mediaType:SSPublishContentMediaTypeNews];
     

@@ -25,7 +25,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>2048delux</string>
+				<string>d2048delux</string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string>com.fooldragon.2048</string>

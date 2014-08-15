@@ -71,8 +71,9 @@
 
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
 {
-    return [ShareSDK handleOpenURL:url
-                        wxDelegate:self];
+    return YES;
+//    return [ShareSDK handleOpenURL:url
+//                        wxDelegate:self];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -80,9 +81,10 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    return [ShareSDK handleOpenURL:url
-                 sourceApplication:sourceApplication
-                        annotation:annotation
-                        wxDelegate:self];
+    return YES;
+    //    return [ShareSDK handleOpenURL:url
+//                 sourceApplication:sourceApplication
+//                        annotation:annotation
+//                        wxDelegate:self];
 }
 @end
