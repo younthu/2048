@@ -260,7 +260,6 @@
 		5D4EB65C199A094800CBE58C /* shareNoOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareNoOutline.png; sourceTree = "<group>"; };
 		5D566CEA1978F5AD002D0891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D566CF51978F691002D0891 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		5D566CF71978F69B002D0891 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		5D58268E19988A3900F5C14C /* libFlurry_5.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_5.2.0.a; path = m2048/libFlurry_5.2.0.a; sourceTree = "<group>"; };
 		5D58269019988B8D00F5C14C /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = m2048/Flurry.h; sourceTree = "<group>"; };
 		5D58269119988C3C00F5C14C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -271,9 +270,10 @@
 		5D7012791985563D00D7DA15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5DAAD168199DFEF400F22EBE /* UIView+getImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+getImage.h"; sourceTree = "<group>"; };
 		5DAAD169199DFEF400F22EBE /* UIView+getImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+getImage.m"; sourceTree = "<group>"; };
+		5DAAD16B199E03E200F22EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DAAD16C199E03F000F22EBE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		5DADA7201978EB6A00DAC071 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
 		5DADA7221978EB7A00DAC071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Strings.strings; sourceTree = "<group>"; };
-		5DADA72B1978EC2B00DAC071 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -887,8 +887,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				2443DC6A18D662CA00C920C1 /* Base */,
-				5DADA72B1978EC2B00DAC071 /* en */,
-				5D566CF71978F69B002D0891 /* zh-Hans */,
+				5DAAD16B199E03E200F22EBE /* en */,
+				5DAAD16C199E03F000F22EBE /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
