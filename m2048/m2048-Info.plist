@@ -23,12 +23,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.fooldragon.2048</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>d2048delux</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string>com.fooldragon.2048</string>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
