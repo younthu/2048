@@ -115,6 +115,7 @@
 		5D70126A19850C7A00D7DA15 /* merge.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5D70126819850C7A00D7DA15 /* merge.sks */; };
 		5D70126B19850C7A00D7DA15 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70126919850C7A00D7DA15 /* spark.png */; };
 		5D7012751985563600D7DA15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D7012771985563600D7DA15 /* Localizable.strings */; };
+		5DAAD16A199DFEF400F22EBE /* UIView+getImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAAD169199DFEF400F22EBE /* UIView+getImage.m */; };
 		5DADA71F1978EB6A00DAC071 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA7211978EB6A00DAC071 /* Strings.strings */; };
 /* End PBXBuildFile section */
 
@@ -268,6 +269,8 @@
 		5D7012761985563600D7DA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D7012781985563B00D7DA15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D7012791985563D00D7DA15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5DAAD168199DFEF400F22EBE /* UIView+getImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+getImage.h"; sourceTree = "<group>"; };
+		5DAAD169199DFEF400F22EBE /* UIView+getImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+getImage.m"; sourceTree = "<group>"; };
 		5DADA7201978EB6A00DAC071 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
 		5DADA7221978EB7A00DAC071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Strings.strings; sourceTree = "<group>"; };
 		5DADA72B1978EC2B00DAC071 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 				5D4EB658199A071A00CBE58C /* share.png */,
 				5D4EB659199A071A00CBE58C /* undo.png */,
 				5D7012771985563600D7DA15 /* Localizable.strings */,
+				5DAAD168199DFEF400F22EBE /* UIView+getImage.h */,
+				5DAAD169199DFEF400F22EBE /* UIView+getImage.m */,
 			);
 			path = m2048;
 			sourceTree = "<group>";
@@ -757,7 +762,7 @@
 				ORGANIZATIONNAME = Danqing;
 				TargetAttributes = {
 					2443DC5118D662CA00C920C1 = {
-						DevelopmentTeam = 2APMGKW63H;
+						DevelopmentTeam = HXEHGC77U2;
 					};
 					2443DC7918D662CA00C920C1 = {
 						TestTargetID = 2443DC5118D662CA00C920C1;
@@ -833,6 +838,7 @@
 				2443DCA618D66CCC00C920C1 /* M2ViewController.m in Sources */,
 				2443DC6418D662CA00C920C1 /* main.m in Sources */,
 				24C4515B18D6DC4A0001FCFD /* M2Cell.m in Sources */,
+				5DAAD16A199DFEF400F22EBE /* UIView+getImage.m in Sources */,
 				24C4516818DD64A90001FCFD /* M2GridView.m in Sources */,
 				2443DC9A18D663FC00C920C1 /* M2Scene.m in Sources */,
 				24C4515E18D6DC740001FCFD /* M2Grid.m in Sources */,

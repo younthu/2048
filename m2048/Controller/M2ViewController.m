@@ -15,6 +15,7 @@
 #import "M2Overlay.h"
 #import "M2GridView.h"
 #import <ShareSDK/ShareSDK.h>
+#import "UIView+getImage.h"
 
 @implementation M2ViewController {
   IBOutlet UIButton *_restartButton;
@@ -69,13 +70,13 @@
     [_scene undo];
 }
 - (IBAction)shareIt:(id)sender {
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
+    UIImage *image = [self.view getImage];
     
     NSString *content = [NSString stringWithFormat:@"在%@模式中，我拿了%@/%@ 分，敢挑战我么? 我在玩2048扩展版，支持1024，2048，8196三种模式，还可以支持回撤哦!",_targetScore.text, _scoreView.score.text, _bestView.score.text];
     //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:content
                                        defaultContent:content
-                                                image:[ShareSDK imageWithPath:imagePath]
+                                                image:[ShareSDK pngImageWithImage:image]
                                                 title:@"2048爆炸版"
                                                   url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
 //                                                  url:@"d2048delux://ddd"
