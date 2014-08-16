@@ -68,6 +68,7 @@
 
 - (IBAction)undoIt:(id)sender {
     [_scene undo];
+    [Flurry logEvent:@"Undo"];
 }
 - (IBAction)shareIt:(id)sender {
     UIImage *image = [self.view getImage];
@@ -93,6 +94,7 @@
                                 if (state == SSResponseStateSuccess)
                                 {
                                     NSLog(@"分享成功");
+                                    [Flurry logEvent:[NSString stringWithFormat:@"Shared to %@", [ShareSDK getClientNameWithType:type]]];
                                     
                                 }
                                 else if (state == SSResponseStateFail)

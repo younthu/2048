@@ -22,8 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Flurry startSession:@"QDFCBY2QQGXTYTWG7WD6"];
     [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:@"QDFCBY2QQGXTYTWG7WD6"];
     
     // Share SDK setup
     [ShareSDK registerApp:@"2ada5371018c"];
@@ -39,6 +39,8 @@
 //    [ShareSDK connectQQWithQZoneAppKey:@"1102005755"                 //该参数填入申请的QQ AppId
 //                     qqApiInterfaceCls:[QQApiInterface class]
 //                       tencentOAuthCls:[TencentOAuth class]];
+    
+
   return YES;
 }
 
