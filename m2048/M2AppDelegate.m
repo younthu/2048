@@ -24,6 +24,8 @@
 {
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:@"QDFCBY2QQGXTYTWG7WD6"];
+    [Flurry setSessionReportsOnCloseEnabled:YES];
+    [Flurry setSessionReportsOnPauseEnabled:YES];
     
     // Share SDK setup
     [ShareSDK registerApp:@"2ada5371018c"];
