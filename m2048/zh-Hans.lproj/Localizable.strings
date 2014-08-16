@@ -11,3 +11,17 @@
 "Join the numbers to get to %ld!" = "把数字拼起来，目标 %ld!";
 "Keep Playing" = "继续玩";
 "Undo" = "回撤";
+"About 2048" = "关于 2048";
+"Game Type" = "游戏类型";
+"Board Size" = "游戏面板尺寸";
+"Theme" = "主题";
+"Powers of 2" = "2的n次方";
+"Powers of 3" = "3的n次方";
+"Fibonacci" = "斐波拉契";
+"Default" = "默认";
+"Vibrant" = "明快";
+"Joyful"  = "愉悦";
+"For Fibonacci games, a tile can be joined with a tile that is one level above or below it, but not to one equal to it. For Powers of 3, you need 3 consecutive tiles to be the same to trigger a merge!" = "斐波拉契模式下面，一个块可以和斐波拉契数列中它前面或者后面的一个数结合，但是不能和相同的块结合。3的n次方模式下面，你需要同一行或者同一列中3个连续的块值相同时才能合并成一个块。";
+"The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2." = "游戏格子数量越少，游戏越难玩！5X5的格子中玩2的n次方模式，几乎每次移动都会有合并发生。";
+"Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!" = "选择你自己喜欢的主题，定制属于你自己的2048！我们会陆续提供更多高质量的主题，记得随时更新哦！";
+"Please note: Changing the settings above would restart the game." = "注意：修改设置会导致游戏重启。";
