@@ -44,6 +44,7 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
   
   /* The grid on which everything happens. */
   M2Grid *_grid;
+    NSMutableArray *_scoreHistory;
 }
 
 
@@ -66,6 +67,7 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
   
   // Set the initial state for the game.
   _score = 0; _over = NO; _won = NO; _keepPlaying = NO;
+    _scoreHistory = [@[]mutableCopy];
 
   // Add two tiles to the grid to start with.
   [_grid insertTileAtRandomAvailablePositionWithDelay:NO];
@@ -78,7 +80,11 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
 - (void)moveToDirection:(M2Direction)direction
 {
     if ([self movesAvailable]) {
-        [_grid takeSnapshot];
+        if ([_grid takeSnapshot]) {
+            [self materializePendingScore];
+            NSAssert(_pendingScore == 0, nil);
+            [_scoreHistory addObject:@(_score )];
+        };
     }
   __block M2Tile *tile = nil;
   
@@ -278,5 +284,11 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
 
 - (void)undo{
     [_grid undo];
+    if (_scoreHistory.count > 0) {
+        _score = [[_scoreHistory lastObject] integerValue];
+        [_scoreHistory removeLastObject];
+        _pendingScore = 0;
+        [self materializePendingScore];
+    }
 }
 @end

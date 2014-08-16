@@ -167,7 +167,7 @@
 }
 
 #pragma - mark udo
--(void)takeSnapshot{
+-(BOOL)takeSnapshot{
     NSMutableArray *gridSnapshot = [[NSMutableArray alloc] initWithCapacity:self.dimension];
     
     for (NSInteger i = 0; i < self.dimension; i++) {
@@ -181,29 +181,26 @@
     // Check if it is the same as before one.
     if (self.snapShots.count > 0) {
         NSArray *array = self.snapShots.lastObject;
-        BOOL identical = YES;
         for (int i = 0; i < self.dimension; i++) {
             for (int j = 0; j < self.dimension; j++) {
                 M2Cell *prev = array[i][j];
                 M2Cell *cur  = gridSnapshot[i][j];
                 if (prev.level != cur.level) {
-                    identical = NO;
                     [self.snapShots addObject:gridSnapshot];
                     NSLog(@"Taking snapshot\n%@",self);
-                    break;
+                    return YES;
                 }
             }
-            if (!identical) {
-                break;
-            }
         }
-        if (identical) {
-            NSLog(@"Found duplicated snapshot\n%@", self);
-        }
+        NSLog(@"Found duplicated snapshot\n%@", self);
+        return NO;
+       
     }else{
         [self.snapShots addObject:gridSnapshot];
         NSLog(@"Taking snapshot\n%@",self);
+        return YES;
     }
+    return YES;
 }
 - (void)popSnapshot{
     if (self.snapShots.count > 0) {

@@ -82,6 +82,6 @@ typedef void (^IteratorBlock)(M2Position);
  */
 - (void)removeAllTilesAnimated:(BOOL)animated;
 - (void)undo;
--(void)takeSnapshot;
+-(BOOL)takeSnapshot;
 - (void)popSnapshot;
 @end
