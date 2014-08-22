@@ -72,8 +72,8 @@
 }
 - (IBAction)shareIt:(id)sender {
     UIImage *image = [self.view getImage];
-    
-    NSString *content = [NSString stringWithFormat:@"在%@模式中，我拿了%@/%@ 分，敢挑战我么? 我在玩2048扩展版，支持1024，2048，8196三种模式，还可以支持回撤哦!",_targetScore.text, _scoreView.score.text, _bestView.score.text];
+    NSString *message = NSLocalizedString(@"Social Message Template", );
+    NSString *content = [NSString stringWithFormat:message,_targetScore.text, _scoreView.score.text, _bestView.score.text];
     //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:content
                                        defaultContent:content

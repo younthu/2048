@@ -65,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  [Settings setInteger:indexPath.row forKey:self.title];
+  [Settings setInteger:indexPath.row forKey:self.key];
   [self.tableView reloadData];
   GSTATE.needRefresh = YES;
 }

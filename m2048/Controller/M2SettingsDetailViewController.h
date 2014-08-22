@@ -12,5 +12,5 @@
 
 @property (nonatomic, strong) NSArray *options;
 @property (nonatomic, strong) NSString *footer;
-
+@property (nonatomic, copy)   NSString *key;
 @end

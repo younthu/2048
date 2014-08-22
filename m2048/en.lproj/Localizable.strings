@@ -24,3 +24,4 @@
 "The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2." = "The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2.";
 "Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!" = "Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!";
 "Please note: Changing the settings above would restart the game." = "Please note: Changing the settings above would restart the game.";
+"Social Message Template" = "In %@ game，I got %@/%@ ，dare you challenge me? I'm playing Explosive 2048 Deluxe, it supports 1024，2048，8196, and, it supports undo! Check it now, https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8";

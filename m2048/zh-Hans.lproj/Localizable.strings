@@ -25,3 +25,4 @@
 "The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2." = "游戏格子数量越少，游戏越难玩！5X5的格子中玩2的n次方模式，几乎每次移动都会有合并发生。";
 "Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!" = "选择你自己喜欢的主题，定制属于你自己的2048！我们会陆续提供更多高质量的主题，记得随时更新哦！";
 "Please note: Changing the settings above would restart the game." = "注意：修改设置会导致游戏重启。";
+"Social Message Template" = "在%@模式中，我拿了%@/%@ 分，敢挑战我么? 我在玩2048全能版(iOS)，支持1024，2048，8196三种模式，还可以支持回撤哦! 点我下载来玩吧！https://itunes.apple.com/cn/app/2048-delux/id904996577?ls=1&mt=8";

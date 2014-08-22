@@ -19,6 +19,7 @@
   NSArray *_options;
   NSArray *_optionSelections;
   NSArray *_optionsNotes;
+    NSArray *_optionsKey;
 }
 
 
@@ -45,15 +46,14 @@
 - (void)commonInit
 {
   _options = @[NSLocalizedString(@"Game Type",nil), NSLocalizedString(@"Board Size",nil), NSLocalizedString(@"Theme",nil)];
-  
+    _optionsKey = @[@"Game Type", @"Board Size", @"Theme"];
   _optionSelections = @[@[NSLocalizedString(@"Powers of 2",nil), NSLocalizedString(@"Powers of 3",nil), NSLocalizedString(@"Fibonacci",nil)],
                         @[@"3 x 3", @"4 x 4", @"5 x 5"],
                         @[NSLocalizedString(@"Default",nil), NSLocalizedString(@"Vibrant",nil), NSLocalizedString(@"Joyful",nil)]];
-  
-                     _optionsNotes = @[
-                                       NSLocalizedString(@"For Fibonacci games, a tile can be joined with a tile that is one level above or below it, but not to one equal to it. For Powers of 3, you need 3 consecutive tiles to be the same to trigger a merge!",nil),
-                                       NSLocalizedString(@"The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2.",nil),
-                                       NSLocalizedString(@"Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!",nil)];
+    _optionsNotes = @[
+                      NSLocalizedString(@"For Fibonacci games, a tile can be joined with a tile that is one level above or below it, but not to one equal to it. For Powers of 3, you need 3 consecutive tiles to be the same to trigger a merge!",nil),
+                      NSLocalizedString(@"The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2.",nil),
+                      NSLocalizedString(@"Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!",nil)];
 }
 
 
@@ -84,6 +84,7 @@
     
     NSInteger index = [_tableView indexPathForSelectedRow].row;
     sdvc.title = [_options objectAtIndex:index];
+      sdvc.key = _optionsKey[index];
     sdvc.options = [_optionSelections objectAtIndex:index];
     sdvc.footer = [_optionsNotes objectAtIndex:index];
   }
