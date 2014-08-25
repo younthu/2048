@@ -79,12 +79,14 @@
                                        defaultContent:content
                                                 image:[ShareSDK pngImageWithImage:image]
                                                 title:@"2048爆炸版"
-                                                  url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
-//                                                  url:@"d2048delux://ddd"
+//                                                  url:@"https://itunes.apple.com/us/app/2048-delux/id904996577?ls=1&mt=8"
+                                                  url:@"d2048delux://ddd"
                                           description:content
                                             mediaType:SSPublishContentMediaTypeNews];
+    id<ISSContainer> container = [ShareSDK container];
+    [container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionAny];
     
-    [ShareSDK showShareActionSheet:nil
+    [ShareSDK showShareActionSheet:container
                          shareList:nil
                            content:publishContent
                      statusBarTips:YES
