@@ -39,8 +39,13 @@
 - (void)updateAppearance
 {
   self.backgroundColor = [GSTATE scoreBoardColor];
-  self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12];
-  self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16];
+    if (UIUserInterfaceIdiomPad == UI_USER_INTERFACE_IDIOM()) {
+        self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:30];
+        self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:40];
+    }else{
+        self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12];
+        self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16];
+    }
 }
 
 /*

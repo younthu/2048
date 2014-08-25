@@ -109,35 +109,36 @@
   [_scoreView updateAppearance];
   [_bestView updateAppearance];
   
+    BOOL isIPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
   _restartButton.backgroundColor = [GSTATE buttonColor];
-  _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+    _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14*(isIPad?2.4:1.0)];
   
   _settingsButton.backgroundColor = [GSTATE buttonColor];
-  _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+  _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14*(isIPad?2.4:1.0)];
   
   _targetScore.textColor = [GSTATE buttonColor];
   
   long target = [GSTATE valueForLevel:GSTATE.winningLevel];
   
   if (target > 100000) {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34];
+    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34*(isIPad?2.4:1.0)];
   } else if (target < 10000) {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42];
+    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42*(isIPad?2.4:1.0)];
   } else {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40];
+    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40*(isIPad?2.4:1.0)];
   }
   
   _targetScore.text = [NSString stringWithFormat:@"%ld", target];
   
   _subtitle.textColor = [GSTATE buttonColor];
-  _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
+  _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14*(isIPad?1.5:1.0)];
 //    _subtitle.text = [NSString stringWithFormat:@"Join the numbers to get to %ld!", target];
     NSString *targetStr = NSLocalizedString(@"Join the numbers to get to %ld!", nil);
     _subtitle.text = [NSString stringWithFormat:targetStr, target];
   
-  _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
-  _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
-  _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
+  _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36*(isIPad?2.4:1.0)];
+  _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*(isIPad?2.4:1.0)];
+  _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*(isIPad?2.4:1.0)];
   
   _overlay.message.textColor = [GSTATE buttonColor];
   [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
