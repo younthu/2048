@@ -80,10 +80,11 @@
 
 - (NSInteger)tileSize
 {
+    BOOL isIpad = (UIUserInterfaceIdiomPad == UI_USER_INTERFACE_IDIOM());
   if (self.dimension <= 4) {
-    return 66;
+      return 66 * (isIpad?2.0:1.0);
   }
-  return 56;
+  return 56 * (isIpad?2.0:1.0);
 }
 
 
