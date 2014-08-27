@@ -17,8 +17,16 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentWeiboConnection/TencentWeiboConnection.h>
 
+#import "iRate.h"
+
 
 @implementation M2AppDelegate
++ (void)initialize
+{
+    //configure iRate
+    [iRate sharedInstance].daysUntilPrompt = 3;
+    [iRate sharedInstance].usesUntilPrompt = 15;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -29,6 +37,10 @@
     
     // Share SDK setup
     [ShareSDK registerApp:@"2ada5371018c"];
+    
+//    [ShareSDK connectTwitterWithConsumerKey:@"okKRUKIuqUZ5gPfJBn1mInirb"
+//                             consumerSecret:@"ESm2Qu3aJZpriIQ6UOiQxwFUSyOYWJlspY9omYEXQ2KKxyAUed"
+//                                redirectUri:@"https://twitter.com/Explosive2048De"];
     [ShareSDK  connectSinaWeiboWithAppKey:@"1079976897"
                                 appSecret:@"629eadfdc738ab1c4345a2a9eec909f2"
                               redirectUri:@"https://api.weibo.com/oauth2/default.html"
