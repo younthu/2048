@@ -109,7 +109,6 @@
 		5D70126A19850C7A00D7DA15 /* merge.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5D70126819850C7A00D7DA15 /* merge.sks */; };
 		5D70126B19850C7A00D7DA15 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70126919850C7A00D7DA15 /* spark.png */; };
 		5D7012751985563600D7DA15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D7012771985563600D7DA15 /* Localizable.strings */; };
-		5D7B8EB719AD94C7001E94D4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7B8EB619AD94C7001E94D4 /* StoreKit.framework */; };
 		5D7B8EB919AD9896001E94D4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7B8EB819AD9896001E94D4 /* AddressBook.framework */; };
 		5D7B8EBB19AD989E001E94D4 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7B8EBA19AD989E001E94D4 /* AddressBookUI.framework */; };
 		5D7B8EBD19AD98BF001E94D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7B8EBC19AD98BE001E94D4 /* MediaPlayer.framework */; };
@@ -270,7 +269,6 @@
 		5D7012761985563600D7DA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D7012781985563B00D7DA15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D7012791985563D00D7DA15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		5D7B8EB619AD94C7001E94D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5D7B8EB819AD9896001E94D4 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		5D7B8EBA19AD989E001E94D4 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		5D7B8EBC19AD98BE001E94D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -299,7 +297,6 @@
 				5D4546D3199C934300DA98D3 /* CoreMedia.framework in Frameworks */,
 				5D7B8EBB19AD989E001E94D4 /* AddressBookUI.framework in Frameworks */,
 				5D7B8EB919AD9896001E94D4 /* AddressBook.framework in Frameworks */,
-				5D7B8EB719AD94C7001E94D4 /* StoreKit.framework in Frameworks */,
 				5D4546D5199C937A00DA98D3 /* MessageUI.framework in Frameworks */,
 				5D4546A1199C91BA00DA98D3 /* PocketConnection.framework in Frameworks */,
 				5D454694199C91BA00DA98D3 /* EverNoteConnection.framework in Frameworks */,
@@ -406,7 +403,6 @@
 				5D7B8EBC19AD98BE001E94D4 /* MediaPlayer.framework */,
 				5D7B8EBA19AD989E001E94D4 /* AddressBookUI.framework */,
 				5D7B8EB819AD9896001E94D4 /* AddressBook.framework */,
-				5D7B8EB619AD94C7001E94D4 /* StoreKit.framework */,
 				5D4546D4199C937A00DA98D3 /* MessageUI.framework */,
 				5D4546D2199C934300DA98D3 /* CoreMedia.framework */,
 				5D45463A199C91BA00DA98D3 /* ShareSDK */,
@@ -795,6 +791,11 @@
 				TargetAttributes = {
 					2443DC5118D662CA00C920C1 = {
 						DevelopmentTeam = HXEHGC77U2;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					2443DC7918D662CA00C920C1 = {
 						TestTargetID = 2443DC5118D662CA00C920C1;

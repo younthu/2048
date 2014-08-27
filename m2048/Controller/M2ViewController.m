@@ -102,6 +102,7 @@
                                 else if (state == SSResponseStateFail)
                                 {
                                     NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+                                    [Flurry logError:[NSString stringWithFormat:@"Failed to share to %@",[ShareSDK getClientNameWithType:type]] message:[error errorDescription] error:nil];
                                 }
                             }];
 }

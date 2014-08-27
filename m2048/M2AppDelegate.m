@@ -16,6 +16,8 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentWeiboConnection/TencentWeiboConnection.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
+#import <GooglePlus/GooglePlus.h>
 
 #import "iRate.h"
 
@@ -40,6 +42,13 @@
     
     // Share SDK setup
     [ShareSDK registerApp:@"2ada5371018c"];
+    
+    //初始化Google+
+    [ShareSDK connectGooglePlusWithClientId:@"918380901680-blgp3a40umfjp3nr04qif8b0fqs4qu5e.apps.googleusercontent.com"        //该参数传入应用的ClientID
+                               clientSecret:@"kq0OLZBik9bxjrZgmpGN3OFj"                                          //该参数传入应用的ClientSecret
+                                redirectUri:@"http://localhost"                                                               //回调地址
+                                  signInCls:[GPPSignIn class]
+                                   shareCls:[GPPShare class]];
     
 //    [ShareSDK connectTwitterWithConsumerKey:@"okKRUKIuqUZ5gPfJBn1mInirb"
 //                             consumerSecret:@"ESm2Qu3aJZpriIQ6UOiQxwFUSyOYWJlspY9omYEXQ2KKxyAUed"
