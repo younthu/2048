@@ -19,13 +19,16 @@
 
 #import "iRate.h"
 
+@interface M2AppDelegate()<iRateDelegate>
 
+@end
 @implementation M2AppDelegate
 + (void)initialize
 {
     //configure iRate
     [iRate sharedInstance].daysUntilPrompt = 3;
     [iRate sharedInstance].usesUntilPrompt = 15;
+    [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -53,8 +56,6 @@
 //    [ShareSDK connectQQWithQZoneAppKey:@"1102005755"                 //该参数填入申请的QQ AppId
 //                     qqApiInterfaceCls:[QQApiInterface class]
 //                       tencentOAuthCls:[TencentOAuth class]];
-    
-
   return YES;
 }
 
@@ -102,5 +103,34 @@
 //                 sourceApplication:sourceApplication
 //                        annotation:annotation
 //                        wxDelegate:self];
+}
+
+#pragma mark - <iRateDelegate>
+- (void)iRateDidOpenAppStore{
+    [Flurry logEvent:@"iRateDidOpenAppStore"];
+}
+
+- (void)iRateDidPromptForRating{
+    [Flurry logEvent:@"iRateDidPromptForRating"];
+}
+
+- (void)iRateUserDidAttemptToRateApp{
+    [Flurry logEvent:@"iRateUserDidAttemptToRateApp"];
+}
+
+- (void)iRateUserDidDeclineToRateApp{
+    [Flurry logEvent:@"iRateUserDidDeclineToRateApp"];
+}
+
+- (void)iRateUserDidRequestReminderToRateApp{
+    [Flurry logEvent:@"iRateUserDidRequestReminderToRateApp"];
+}
+
+- (void)iRateCouldNotConnectToAppStore:(NSError *)error{
+    [Flurry logError:@"iRateCouldNotConnectToAppStore" message:nil error:error];
+}
+
+- (void)iRateDidDetectAppUpdate{
+//     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
 }
 @end
