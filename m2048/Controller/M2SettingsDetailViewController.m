@@ -56,7 +56,7 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Settings Detail Cell"];
   
   cell.textLabel.text = [self.options objectAtIndex:indexPath.row];
-  cell.accessoryType = ([Settings integerForKey:self.title] == indexPath.row) ?
+  cell.accessoryType = ([Settings integerForKey:self.key] == indexPath.row) ?
     UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
   cell.tintColor = [GSTATE scoreBoardColor];
   

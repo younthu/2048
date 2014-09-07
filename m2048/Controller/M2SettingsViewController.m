@@ -121,7 +121,7 @@
   } else {
     cell.textLabel.text = [_options objectAtIndex:indexPath.row];
     
-    NSInteger index = [Settings integerForKey:[_options objectAtIndex:indexPath.row]];
+    NSInteger index = [Settings integerForKey:[_optionsKey objectAtIndex:indexPath.row]];
     cell.detailTextLabel.text = [[_optionSelections objectAtIndex:indexPath.row] objectAtIndex:index];
     cell.detailTextLabel.textColor = [GSTATE scoreBoardColor];
   }
